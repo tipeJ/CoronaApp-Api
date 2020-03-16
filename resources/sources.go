@@ -25,4 +25,9 @@ var NewsSources = map[string]models.NewsSource{
 		Keyword:    "Coronavirus",
 		DateFormat: time.RFC1123,
 	},
+	"Independent (UK)": models.NewsSource{
+		RssUrl:     "http://www.independent.co.uk/news/health/rss",
+		Keyword:    "Coronavirus",
+		DateFormat: time.RFC1123,
+	},
 }
