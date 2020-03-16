@@ -4,8 +4,6 @@ module github.com/tipej/CoronaApp-Api
 go 1.14
 
 require (
-	github.com/gorilla/mux
-	github.com/mmcdole/gofeed
 	github.com/gin-gonic/gin v0.0.0-20150626140855-4cc2de6207f4
 	github.com/heroku/x v0.0.0-20171004170240-705849e307dd
 	github.com/manucorporat/sse v0.0.0-20150604091100-c142f0f1baea // indirect
