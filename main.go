@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	"sort"
 	"time"
 
@@ -79,7 +80,8 @@ func requestNews() {
 
 func main() {
 	go requestNewsLoop()
+	port := os.Getenv("PORT")
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/news", newsLink)
-	log.Fatal(http.ListenAndServe(":80", router))
+	log.Fatal(http.ListenAndServe(port, router))
 }
