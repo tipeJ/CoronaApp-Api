@@ -29,6 +29,7 @@ func newsLink(w http.ResponseWriter, r *http.Request) {
 
 // Loop The News Requests
 func requestNewsLoop() {
+	go requestNews()
 	ticker := time.NewTicker(10 * time.Minute)
 	for t := range ticker.C {
 		_ = t
