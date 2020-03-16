@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"sort"
+	"strings"
 	"time"
 
 	"github.com/gorilla/mux"
@@ -55,13 +56,17 @@ func requestNews() {
 					for _, category := range item.Categories {
 						if category == v.Keyword {
 							equals = true
+							break
 						}
+					}
+					if strings.Contains(strings.ToLower(item.Title), strings.ToLower(v.Keyword)) {
+						equals = true
 					}
 				} else {
 					equals = true
 				}
 				if equals {
-					published, _ := time.Parse(time.RFC1123Z, item.Published)
+					published, _ := time.Parse(v.DateFormat, item.Published)
 					newslist = append(newslist, models.News{
 						Title:       item.Title,
 						Url:         item.Link,
