@@ -1,1 +1,1 @@
-web: CoronaApp-Api.exe
+web: CoronaApp-Api
