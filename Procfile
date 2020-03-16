@@ -1,1 +1,1 @@
-go build
+web: go build
