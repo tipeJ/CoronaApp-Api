@@ -81,5 +81,5 @@ func main() {
 	go requestNewsLoop()
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/news", newsLink)
-	log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(":80", router))
 }
