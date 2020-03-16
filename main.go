@@ -83,5 +83,5 @@ func main() {
 	port := os.Getenv("PORT")
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/news", newsLink)
-	log.Fatal(http.ListenAndServe(port, router))
+	log.Fatal(http.ListenAndServe(":"+port, router))
 }
