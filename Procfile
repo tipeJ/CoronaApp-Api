@@ -1,1 +1,1 @@
-web: go build
+web: CoronaApp-Api.exe
