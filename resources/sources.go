@@ -40,4 +40,12 @@ var NewsSources = map[string]models.NewsSource{
 		Keyword:    "Coronavirus",
 		DateFormat: time.RFC1123,
 	},
+	"France24": models.NewsSource{
+		RssUrl:     "https://www.france24.com/en/tag/coronavirus/rss",
+		DateFormat: time.RFC1123,
+	},
+	"Yahoo News": models.NewsSource{
+		RssUrl:     "https://www.yahoo.com/news/rss/coronavirus",
+		DateFormat: time.RFC1123Z,
+	},
 }
