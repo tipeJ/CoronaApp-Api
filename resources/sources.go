@@ -35,4 +35,9 @@ var NewsSources = map[string]models.NewsSource{
 		Keyword:    "Coronavirus",
 		DateFormat: time.RFC1123Z,
 	},
+	"The Guardian": models.NewsSource{
+		RssUrl:     "https://www.theguardian.com/world/rss",
+		Keyword:    "Coronavirus",
+		DateFormat: time.RFC1123,
+	},
 }
