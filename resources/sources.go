@@ -30,4 +30,9 @@ var NewsSources = map[string]models.NewsSource{
 		Keyword:    "Coronavirus",
 		DateFormat: time.RFC1123,
 	},
+	"Sky News": models.NewsSource{
+		RssUrl:     "http://feeds.skynews.com/feeds/rss/world.xml",
+		Keyword:    "Coronavirus",
+		DateFormat: time.RFC1123Z,
+	},
 }
